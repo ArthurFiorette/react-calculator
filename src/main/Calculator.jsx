@@ -37,13 +37,12 @@ class Calculator extends Component {
     } else {
       try {
         // eslint-disable-next-line
-        let result = eval(`${state.values[0]} ${state.operation} ${state.values[1]}`);
-        result = isNaN(result) ? 0 : result;
-
-        state.values = [result, 0];
+        state.values[0] = eval(`${state.values[0]} ${state.operation} ${state.values[1]}`);
       } catch (_) {
-        state.values = [0, 0];
+        /* just ignore */
       }
+
+      state.values[1] = 0;
 
       const equals = state.operation === '=';
 
