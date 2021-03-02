@@ -90,7 +90,7 @@ class Calculator extends Component {
     return (
       <div className="calculator">
         <Display value={display} />
-        <Button content="AC" classes="triple topLeft" click={this.clearMemory} />
+        <Button content="AC" classes="triple topLeft" click={clearMemory} />
         <Button content="/" classes="operation topRight" click={setOperation} />
         <Button content="7" classes="" click={addDigit} />
         <Button content="8" classes="" click={addDigit} />
